@@ -1,0 +1,15 @@
+openssl s_client -showcerts -servername ohp-st.sompo-japan.co.jp -connect ohp-st.sompo-japan.co.jp:443 > cacert.pem
+openssl s_client -connect ohp-st.sompo-japan.co.jp:443 < /dev/null 2> /dev/null | openssl x509 -text
+openssl s_client -connect ohp-st.sompo-japan.co.jp:443 -servername ohp-st.sompo-japan.co.jp < /dev/null
+openssl x509 -text -noout -in {filename}
+openssl s_client -connect ohp-st.sompo-japan.co.jp:443 -state -debug
+openssl s_client -connect ohp-st.sompo-japan.co.jp:443 -showcerts
+
+pushd \\HEROKUSSDTEST\repos\xop-app-test.git
+heroku git:remote -a xop-app-test
+git push heroku master
+
+kanxm651@gmail.com
+Aa123456001+
+xinyedl1980@gmail.com
+080603_Ye
